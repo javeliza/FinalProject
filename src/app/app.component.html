@@ -1,0 +1,75 @@
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:wght@700&display=swap" rel="stylesheet"> 
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<body>
+<h1 style = "text-align: center;">{{title}}</h1>
+
+<div id = "div1" style = "text-align: center;">
+  <input type="text" #newTodoName placeholder="Name" [(ngModel)]="createPostData.Name" /> 
+  <br>
+  <input type="text"  #newTodoTask placeholder="Task"  [(ngModel)]="createPostData.Task" /> 
+  <br>
+  <input type="text"  #newTodoStatus placeholder="Status"  [(ngModel)]="createPostData.Status" />
+  <!-- <label for = "selected">
+    <select (change) = "saveSelected($event)">
+      <option #newTodoStatus value=" ">Status</option>
+      <option #newTodoStatus value="created">Created</option>
+      <option #newTodoStatus value="in progress">In progress</option>
+      <option #newTodoStatus value="done">Deleted</option>
+    </select>  
+  </label> -->
+  <br>
+  <input type="text" #newTodoDeadline placeholder="Deadline" [(ngModel)]="createPostData.Deadline" /> 
+  <br>
+  <button (click) = "addTodoTask(newTodoName.value, newTodoTask.value, newTodoStatus.value, newTodoDeadline.value)">Add Task</button>
+</div>
+<br>
+<div style = "text-align: center;">
+  <table style = "text-align: center;">
+    <tr>
+      <th>Name</th>
+      <th>Task</th>
+      <th>Status</th>
+      <th>Deadline</th>
+    </tr>
+    <tr *ngFor = "let todo of todos">
+      <td>{{todo.Name}}</td>
+      <td>{{todo.Task}}</td>
+      <td>{{todo.Status}}</td>
+      <td>{{todo.Deadline}}</td>
+      <td>
+        <button (click) = "deleteTodo(todo)">Delete</button>
+        <button (click)= "editTodo(todo)" ng-model= "MyClick">Edit</button>
+        <div ng-show ="MyClick">
+            <div>
+              <input type="text" placeholder = "new Name" [(ngModel)]="editPost.Name" /> 
+            </div>
+            <div>
+              <input type="text" placeholder="New Task" [(ngModel)]="editPost.Task" />
+            </div>
+            <div>
+              <!-- <label for = "selected">
+                <select (change) = "saveSelected($event)">
+                  <option #newTodoStatus value=" ">New Status </option>
+                  <option #newTodoStatus value="created">Created</option>
+                  <option #newTodoStatus value="in progress">In progress</option>
+                  <option #newTodoStatus value="done">Deleted</option>
+                </select>  
+              </label> -->
+              <input type="text" placeholder="New Status" [(ngModel)]="editPost.Status" />
+            </div>
+            <div>
+              <input type="text" placeholder="New Deadline" [(ngModel)]="editPost.Deadline" />
+            </div>
+            <div>
+            </div>
+        </div>
+      </td>
+    </tr>
+    
+  </table>
+</div>
+</body>
+
+

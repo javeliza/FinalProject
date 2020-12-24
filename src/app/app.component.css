@@ -1,0 +1,34 @@
+
+h1{
+    padding: 5px;
+    color:rgb(192, 59, 7); 
+    font-family: 'Montserrat', sans-serif;
+    font: weight 100;
+}
+table{
+    font-family: 'Montserrat', sans-serif;    outline: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse; 
+    padding: 80px;
+    border-spacing: 0;
+
+}
+th, td {
+    text-align: center;
+    padding: 8px;
+}
+tr:nth-child(even){background-color: #f2f2f2}
+
+th{
+    background-color: brown;    
+}
+input{
+    font-family: 'Montserrat', sans-serif;    outline: auto;
+    height: 30px;
+}
+select{
+    font-family: 'Montserrat', sans-serif;    outline: auto;
+    height: 35px;
+    width: 190.1px;
+}
