@@ -3,8 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
 
 # Requirements
-To make a simple To Do App 
-მოთხოვნები:
+To make a simple To Do App:
 
 - შესაძლბელი უნდა იყოს Todo-შექმნა რედაქტირება;​
 - Todo -ს შექმნისას უნდა იყოს ფილდები მომხმარებელი,პროექტი, Todo შემსრულებელი და Todo ვადა
